@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+# Additional customized options
+*.pem
+cert_storage/
+cripto_venv/
