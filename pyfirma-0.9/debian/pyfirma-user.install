@@ -1,0 +1,25 @@
+src/GUI/controler/cert.py /usr/lib/pyfirma/GUI/controler
+src/GUI/controler/firma.py /usr/lib/pyfirma/GUI/controler
+src/GUI/controler/__init__.py /usr/lib/pyfirma/GUI/controler
+src/GUI/controler/list_cert_loader.py /usr/lib/pyfirma/GUI/controler
+src/GUI/model/cert_storage.py /usr/lib/pyfirma/GUI/model
+src/GUI/model/crypto.py /usr/lib/pyfirma/GUI/model
+src/GUI/model/__init__.py /usr/lib/pyfirma/GUI/model
+src/GUI/model/key.py /usr/lib/pyfirma/GUI/model
+src/GUI/model/pdf.py /usr/lib/pyfirma/GUI/model
+src/GUI/model/network.py /usr/lib/pyfirma/GUI/model
+src/GUI/model/nif.py /usr/lib/pyfirma/GUI/model
+src/GUI/model/signature.py /usr/lib/pyfirma/GUI/model
+src/GUI/view/firmaPaso1.py /usr/lib/pyfirma/GUI/view
+src/GUI/view/firmaPaso2.py /usr/lib/pyfirma/GUI/view
+src/GUI/view/firmaPaso3.py /usr/lib/pyfirma/GUI/view
+src/GUI/view/GenericView.py /usr/lib/pyfirma/GUI/view
+src/GUI/view/__init__.py /usr/lib/pyfirma/GUI/view
+src/GUI/view/list_pending_cert.py /usr/lib/pyfirma/GUI/view
+src/GUI/view/main_view.py /usr/lib/pyfirma/GUI/view
+src/GUI/view/solicitar_cert.py /usr/lib/pyfirma/GUI/view
+src/GUI/view/UserInterface.py /usr/lib/pyfirma/GUI/view
+src/GUI/__init__.py /usr/lib/pyfirma/GUI
+src/GUI/__main__.py /usr/lib/pyfirma/GUI
+src/scripts/pyfirma /usr/bin
+

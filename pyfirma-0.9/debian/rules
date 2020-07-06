@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# see ENVIRONMENT in dpkg-buildflags(1)
+# package maintainers to append CFLAGS
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# package maintainers to append LDFLAGS
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+export DH_VIRTUALENV_INSTALL_ROOT=/usr/lib/pyfirma/venv
+#EXTRA_REQUIREMENTS=--upgrade-pip --preinstall "setuptools>=17.1" --preinstall "wheel" \
+#    --preinstall "Cython==0.29.11" --extras=default
+
+#PACKAGE=$(shell dh_listpackages)
+
+DH_VENV_ARGS=--setuptools --python /usr/bin/python3 #$(EXTRA_REQUIREMENTS)
+
+#DH_VENV_DIR=debian/$(PACKAGE)$(DH_VIRTUALENV_INSTALL_ROOT)/$(PACKAGE)
+%:
+	echo $(LD_LIBRARY_PATH)
+	dh $@ --with python-virtualenv -a 
+
+override_dh_virtualenv:
+	dh_virtualenv $(DH_VENV_ARGS) --install-suffix '' --extra-virtualenv-arg "--system-site-packages"  --extra-pip-arg "--ignore-installed" \
+	-p pyfirma-common -N pyfirma-server -N pyfirma-user
+
+override_dh_strip:
+	#dh_strip --exclude=cffi --exclude=_imaging --exclude=libtiff
+#	date -Iseconds >$(DH_VENV_DIR)/dpkg-stamp
+
+override_dh_shlibdeps:
+	dh_shlibdeps -X site-packages/PIL/.libs -a
+#override_dh_install:
+#	dh_auto_install -a
+#	dh_install -a
+# dh_make generated override targets
+# This is example for Cmake (See https://bugs.debian.org/641051 )
+#override_dh_auto_configure:
+#	dh_auto_configure -- #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
+

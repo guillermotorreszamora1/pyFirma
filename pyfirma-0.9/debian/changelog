@@ -1,0 +1,11 @@
+pyfirma (0.9) unstable; urgency=medium
+
+  * Packaging and package splitting complete
+
+ -- guillermo <torreszamoraguillermo@gmail.com>  Thu, 02 Jul 2020 16:26:00 +0200
+
+pyfirma (0.8) unstable; urgency=medium
+
+  * Initial release 
+
+ -- guillermo <torreszamoraguillermo@gmail.com>  Sat, 27 Jun 2020 18:11:35 +0200

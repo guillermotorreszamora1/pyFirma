@@ -1,0 +1,4 @@
+#!/bin/bash
+export PYTHONDONTWRITEBYTECODE=1
+source /usr/lib/pyfirma/venv/bin/activate
+python /usr/lib/pyfirma/GUI_verificacion

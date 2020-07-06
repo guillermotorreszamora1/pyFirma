@@ -1,0 +1,5 @@
+#!/bin/bash
+export PYTHONDONTWRITEBYTECODE=1
+source /usr/lib/pyfirma/venv/bin/activate
+cd /usr/lib/pyfirma
+gunicorn -D --bind 0.0.0.0:5004 server:app

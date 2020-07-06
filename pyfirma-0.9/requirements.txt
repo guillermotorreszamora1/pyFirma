@@ -1,0 +1,14 @@
+endesive==1.5.9
+pyzbar==0.1.8
+pdf2image==1.13.1
+setuptools
+pip
+pillow==7.0.0
+cryptography
+asn1crypto
+requests
+qrcode
+sqlalchemy
+gunicorn
+flask
+six==1.12.0

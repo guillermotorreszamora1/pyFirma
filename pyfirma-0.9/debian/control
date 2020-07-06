@@ -1,0 +1,37 @@
+Source: pyfirma
+Section: miscellaneous
+Priority: optional
+Maintainer: Guillermo Torres  <torreszamoraguillermo@gmail.com>
+Build-Depends: debhelper (>= 11),python3-dev, dh-virtualenv,python3,python3-pip,python3-setuptools,swig,python3-venv
+Standards-Version: 4.1.3
+
+Package: pyfirma-user
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3,python3-tk,pyfirma-common
+Description: Sistema de firma digital(Usuario)
+	sistema de firma digital desarrollado en python3. Esta es una versión
+	temporal que incluye tanto el codigo para la entidad de certificación
+	como el codigo para el cliente. La versión final seran dos paquetes 
+	separados.Diseñado especificamente para imitar los procesos de la
+	FNMT de España pero sin las limitaciones tecnicas. Versión de usuario
+
+Package: pyfirma-server
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3,postgresql,python3-reportlab,python3-psycopg2,pyfirma-common,
+	dbconfig-pgsql | dbconfig-no-thanks
+Description: Sistema de firma digital(servidor)
+	sistema de firma digital desarrollado en python3. Esta es una versión
+	temporal que incluye tanto el codigo para la entidad de certificación
+	como el codigo para el cliente. La versión final seran dos paquetes 
+	separados.Diseñado especificamente para imitar los procesos de la
+	FNMT de España pero sin las limitaciones tecnicas. Versión de servidor
+
+Package: pyfirma-common
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3,postgresql,python3-reportlab,python3-psycopg2,python3-venv,swig
+Description: Sistema de firma digital(Fichero Comunes)
+	sistema de firma digital desarrollado en python3. Esta es una versión
+	temporal que incluye tanto el codigo para la entidad de certificación
+	como el codigo para el cliente. La versión final seran dos paquetes 
+	separados.Diseñado especificamente para imitar los procesos de la
+	FNMT de España pero sin las limitaciones tecnicas. Ficheros Comunes
